@@ -1,0 +1,20 @@
+@model Entidades.Core.Usuario
+
+<h2>Crear Nuevo Usuario</h2>
+
+<form asp-action="Create" method="post">
+    <div>
+        <label>Código de Usuario</label>
+        <input asp-for="CodUsuario" />
+    </div>
+    <div>
+        <label>Nombres</label>
+        <input asp-for="Nombres" />
+    </div>
+    <div>
+        <label>Contraseña</label>
+        <input asp-for="ClaveTexto" type="password" />
+    </div>
+    <button type="submit">Guardar</button>
+    <a asp-action="Index">Cancelar</a>
+</form>

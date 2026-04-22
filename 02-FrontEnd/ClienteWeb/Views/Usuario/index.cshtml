@@ -1,0 +1,48 @@
+@model List<Entidades.Core.Usuario>
+
+<h2>Lista de Usuarios</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-success">Crear Nuevo Usuario</a>
+</p>
+
+<table class="table">
+    <thead>
+        <thead>
+    <tr>
+        <th>ID</th>
+        <th>Código</th>
+        <th>Nombres</th>
+        <th>Acciones</th>
+    </tr>
+</thead>
+        <tr>
+            <th>ID</th>
+            <th>Código</th>
+            <th>Nombres</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdUsuario</td>
+                <td>@item.CodUsuario</td>
+                <td>@item.Nombres</td>
+            </tr>
+        }
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.IdUsuario</td>
+            <td>@item.CodUsuario</td>
+            <td>@item.Nombres</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdUsuario">Editar</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdUsuario">Eliminar</a>
+            </td>
+        </tr>
+    }
+</tbody>
+</table>

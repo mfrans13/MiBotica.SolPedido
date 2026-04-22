@@ -1,0 +1,21 @@
+@model Entidades.Core.Usuario
+
+<h2>Eliminar Usuario</h2>
+
+<h3>¿Estás seguro de eliminar este usuario?</h3>
+
+<div>
+    <dl>
+        <dt>Código</dt>
+        <dd>@Model.CodUsuario</dd>
+        
+        <dt>Nombres</dt>
+        <dd>@Model.Nombres</dd>
+    </dl>
+    
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="IdUsuario" />
+        <button type="submit">Eliminar</button>
+        <a asp-action="Index">Cancelar</a>
+    </form>
+</div>

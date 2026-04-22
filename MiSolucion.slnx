@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/01-BackEnd/">
+    <Project Path="01-BackEnd/AccesoDatos/AccesoDatos.csproj" />
+    <Project Path="01-BackEnd/LogicaNegocio/LogicaNegocio.csproj" />
+  </Folder>
+  <Folder Name="/02-FrontEnd/">
+    <Project Path="02-FrontEnd/ClienteWeb/ClienteWeb.csproj" />
+  </Folder>
+  <Folder Name="/03-Transversal/">
+    <Project Path="03-Transversal/Entidades/Entidades.csproj" />
+    <Project Path="03-Transversal/Utiles/Utiles.csproj" />
+  </Folder>
+</Solution>

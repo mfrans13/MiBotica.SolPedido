@@ -1,0 +1,22 @@
+@model Entidades.Core.Usuario
+
+<h2>Editar Usuario</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="IdUsuario" />
+    
+    <div>
+        <label>Código de Usuario</label>
+        <input asp-for="CodUsuario" />
+    </div>
+    <div>
+        <label>Nombres</label>
+        <input asp-for="Nombres" />
+    </div>
+    <div>
+        <label>Nueva Contraseña (dejar vacío para no cambiar)</label>
+        <input asp-for="ClaveTexto" type="password" />
+    </div>
+    <button type="submit">Guardar</button>
+    <a asp-action="Index">Cancelar</a>
+</form>

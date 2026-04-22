@@ -1,0 +1,11 @@
+C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Utiles\bin\Debug\net10.0\Utiles.deps.json
+C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Utiles\bin\Debug\net10.0\Utiles.dll
+C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Utiles\bin\Debug\net10.0\Utiles.pdb
+C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Utiles\obj\Debug\net10.0\Utiles.GeneratedMSBuildEditorConfig.editorconfig
+C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Utiles\obj\Debug\net10.0\Utiles.AssemblyInfoInputs.cache
+C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Utiles\obj\Debug\net10.0\Utiles.AssemblyInfo.cs
+C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Utiles\obj\Debug\net10.0\Utiles.csproj.CoreCompileInputs.cache
+C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Utiles\obj\Debug\net10.0\Utiles.dll
+C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Utiles\obj\Debug\net10.0\refint\Utiles.dll
+C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Utiles\obj\Debug\net10.0\Utiles.pdb
+C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Utiles\obj\Debug\net10.0\ref\Utiles.dll

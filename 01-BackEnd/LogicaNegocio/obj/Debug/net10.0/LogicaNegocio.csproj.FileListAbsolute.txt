@@ -1,0 +1,17 @@
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\bin\Debug\net10.0\LogicaNegocio.deps.json
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\bin\Debug\net10.0\LogicaNegocio.dll
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\bin\Debug\net10.0\LogicaNegocio.pdb
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\bin\Debug\net10.0\AccesoDatos.dll
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\bin\Debug\net10.0\Entidades.dll
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\bin\Debug\net10.0\AccesoDatos.pdb
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\bin\Debug\net10.0\Entidades.pdb
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\obj\Debug\net10.0\LogicaNegocio.csproj.AssemblyReference.cache
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\obj\Debug\net10.0\LogicaNegocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\obj\Debug\net10.0\LogicaNegocio.AssemblyInfoInputs.cache
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\obj\Debug\net10.0\LogicaNegocio.AssemblyInfo.cs
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\obj\Debug\net10.0\LogicaNegocio.csproj.CoreCompileInputs.cache
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\obj\Debug\net10.0\LogicaNe.53575492.Up2Date
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\obj\Debug\net10.0\LogicaNegocio.dll
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\obj\Debug\net10.0\refint\LogicaNegocio.dll
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\obj\Debug\net10.0\LogicaNegocio.pdb
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\LogicaNegocio\obj\Debug\net10.0\ref\LogicaNegocio.dll
