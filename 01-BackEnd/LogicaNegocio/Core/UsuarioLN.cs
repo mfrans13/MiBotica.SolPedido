@@ -15,7 +15,7 @@ public class UsuarioLN
         new UsuarioDA().InsertarUsuario(usuario);
     }
 
-    public Usuario BuscarUsuario(int id)
+    public Usuario? BuscarUsuario(int id)
     {
         return new UsuarioDA().BuscarUsuario(id);
     }

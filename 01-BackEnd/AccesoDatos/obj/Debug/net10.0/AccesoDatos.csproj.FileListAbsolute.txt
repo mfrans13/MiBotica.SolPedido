@@ -8,6 +8,7 @@ C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\AccesoDatos\obj\Debug\net10.0\Acc
 C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\AccesoDatos\obj\Debug\net10.0\AccesoDatos.AssemblyInfoInputs.cache
 C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\AccesoDatos\obj\Debug\net10.0\AccesoDatos.AssemblyInfo.cs
 C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\AccesoDatos\obj\Debug\net10.0\AccesoDatos.csproj.CoreCompileInputs.cache
+C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\AccesoDatos\obj\Debug\net10.0\AccesoDatos.sourcelink.json
 C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\AccesoDatos\obj\Debug\net10.0\AccesoDa.B2719C34.Up2Date
 C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\AccesoDatos\obj\Debug\net10.0\AccesoDatos.dll
 C:\proyectoClase\MiBotica.SolPedido\01-BackEnd\AccesoDatos\obj\Debug\net10.0\refint\AccesoDatos.dll

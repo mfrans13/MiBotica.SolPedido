@@ -5,6 +5,7 @@ C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Entidades\obj\Debug\net10.0\E
 C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Entidades\obj\Debug\net10.0\Entidades.AssemblyInfoInputs.cache
 C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Entidades\obj\Debug\net10.0\Entidades.AssemblyInfo.cs
 C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Entidades\obj\Debug\net10.0\Entidades.csproj.CoreCompileInputs.cache
+C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Entidades\obj\Debug\net10.0\Entidades.sourcelink.json
 C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Entidades\obj\Debug\net10.0\Entidades.dll
 C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Entidades\obj\Debug\net10.0\refint\Entidades.dll
 C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Entidades\obj\Debug\net10.0\Entidades.pdb

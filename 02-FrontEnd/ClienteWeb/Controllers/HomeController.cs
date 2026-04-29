@@ -1,11 +1,18 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ClienteWeb.Models;
+using Entidades.Core;
+using LogicaNegocio.Core;
 
 namespace ClienteWeb.Controllers;
 
 public class HomeController : Controller
 {
+    public IActionResult GetMenu()
+    {
+    var opciones = new OpcionLN().ListaOpciones();
+    return PartialView("_MenuPartial", opciones);
+    }   
     public IActionResult Index()
     {
         return View();

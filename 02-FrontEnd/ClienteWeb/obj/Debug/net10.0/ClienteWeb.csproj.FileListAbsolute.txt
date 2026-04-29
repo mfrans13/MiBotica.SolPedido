@@ -60,6 +60,7 @@ C:\proyectoClase\MiBotica.SolPedido\02-FrontEnd\ClienteWeb\obj\Debug\net10.0\Cli
 C:\proyectoClase\MiBotica.SolPedido\02-FrontEnd\ClienteWeb\obj\Debug\net10.0\ClienteWeb.MvcApplicationPartsAssemblyInfo.cache
 C:\proyectoClase\MiBotica.SolPedido\02-FrontEnd\ClienteWeb\obj\Debug\net10.0\ClienteWeb.RazorAssemblyInfo.cache
 C:\proyectoClase\MiBotica.SolPedido\02-FrontEnd\ClienteWeb\obj\Debug\net10.0\ClienteWeb.RazorAssemblyInfo.cs
+C:\proyectoClase\MiBotica.SolPedido\02-FrontEnd\ClienteWeb\obj\Debug\net10.0\ClienteWeb.sourcelink.json
 C:\proyectoClase\MiBotica.SolPedido\02-FrontEnd\ClienteWeb\obj\Debug\net10.0\rjimswa.dswa.cache.json
 C:\proyectoClase\MiBotica.SolPedido\02-FrontEnd\ClienteWeb\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\proyectoClase\MiBotica.SolPedido\02-FrontEnd\ClienteWeb\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
