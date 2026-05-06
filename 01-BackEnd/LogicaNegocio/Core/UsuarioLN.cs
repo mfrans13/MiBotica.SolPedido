@@ -29,4 +29,10 @@ public class UsuarioLN
     {
         new UsuarioDA().EliminarUsuario(id);
     }
+
+    // ✅ Método para LOGIN
+    public Usuario? BuscarUsuarioPorCredenciales(string codUsuario, byte[] clave)
+    {
+        return new UsuarioDA().BuscarUsuarioPorCredenciales(codUsuario, clave);
+    }
 }

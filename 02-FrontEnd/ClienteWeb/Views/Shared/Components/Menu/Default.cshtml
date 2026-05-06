@@ -1,0 +1,48 @@
+@model List<Entidades.Core.Opcion>
+
+@if (Model != null && Model.Any())
+{
+    <ul class="navbar-nav">
+        @foreach (var item in Model.Where(x => x.IdOpcionRef == 0).OrderBy(x => x.NroOrden))
+        {
+            var tieneHijos = Model.Any(x => x.IdOpcionRef == item.IdOpcion);
+            
+            if (tieneHijos)
+            {
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        <i class="@item.RutaImagen"></i> @item.NombreOpcion
+                    </a>
+                    <ul class="dropdown-menu">
+                        @foreach (var hijo in Model.Where(x => x.IdOpcionRef == item.IdOpcion).OrderBy(x => x.NroOrden))
+                        {
+                            <li>
+                                <a class="dropdown-item" href="@hijo.UrlOpcion">
+                                    <i class="@hijo.RutaImagen"></i> @hijo.NombreOpcion
+                                </a>
+                            </li>
+                        }
+                    </ul>
+                </li>
+            }
+            else
+            {
+                <li class="nav-item">
+                    <a class="nav-link" href="@item.UrlOpcion">
+                        <i class="@item.RutaImagen"></i> @item.NombreOpcion
+                    </a>
+                </li>
+            }
+        }
+    </ul>
+}
+else
+{
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="/Usuario">
+                <i class="fas fa-users"></i> Usuarios
+            </a>
+        </li>
+    </ul>
+}

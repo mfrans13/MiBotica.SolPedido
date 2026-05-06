@@ -9,4 +9,5 @@ public class Usuario
     
     // Adicional (no está en la BD)
     public string ClaveTexto { get; set; } = "";
+    public string? Rol { get; set; }
 }

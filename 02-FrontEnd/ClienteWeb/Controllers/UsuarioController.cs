@@ -1,34 +1,37 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Entidades.Core;
 using LogicaNegocio.Core;
 
 namespace ClienteWeb.Controllers;
 
+[Authorize]  // Cualquier usuario autenticado puede ver el Index
 public class UsuarioController : Controller
 {
-    // GET: Usuario/Index
+    // GET: Usuario/Index (accesible para cualquier autenticado)
     public IActionResult Index()
     {
         List<Usuario> lista = new UsuarioLN().ListaUsuarios();
         return View(lista);
     }
 
-    // GET: Usuario/Create
+    // GET: Usuario/Create (solo Admin)
+    [Authorize(Roles = "Admin")]
     public IActionResult Create()
     {
         Usuario usuario = new Usuario();
         return View(usuario);
     }
 
-    // POST: Usuario/Create
+    // POST: Usuario/Create (solo Admin)
     [HttpPost]
+    [Authorize(Roles = "Admin")]
     public IActionResult Create(Usuario usuario)
     {
         if (ModelState.IsValid)
         {
             try
             {
-                // Encriptar la contraseña
                 usuario.Clave = EncriptarClave(usuario.ClaveTexto);
                 new UsuarioLN().InsertarUsuario(usuario);
                 return RedirectToAction("Index");
@@ -40,65 +43,68 @@ public class UsuarioController : Controller
         }
         return View(usuario);
     }
-    // GET: Usuario/Edit/5
-public IActionResult Edit(int id)
-{
-    Usuario? usuario = new UsuarioLN().BuscarUsuario(id);
-    if (usuario == null)
-    {
-        return NotFound();
-    }
-    return View(usuario);
-}
 
-// POST: Usuario/Edit/5
-[HttpPost]
-public IActionResult Edit(int id, Usuario usuario)
-{
-    if (id != usuario.IdUsuario)
+    // GET: Usuario/Edit/5 (solo Admin)
+    [Authorize(Roles = "Admin")]
+    public IActionResult Edit(int id)
     {
-        return NotFound();
-    }
-
-    if (ModelState.IsValid)
-    {
-        try
+        Usuario? usuario = new UsuarioLN().BuscarUsuario(id);
+        if (usuario == null)
         {
-            // Si se ingresó nueva contraseña, la encripta
-            if (!string.IsNullOrEmpty(usuario.ClaveTexto))
+            return NotFound();
+        }
+        return View(usuario);
+    }
+
+    // POST: Usuario/Edit/5 (solo Admin)
+    [HttpPost]
+    [Authorize(Roles = "Admin")]
+    public IActionResult Edit(int id, Usuario usuario)
+    {
+        if (id != usuario.IdUsuario)
+        {
+            return NotFound();
+        }
+
+        if (ModelState.IsValid)
+        {
+            try
             {
-                usuario.Clave = EncriptarClave(usuario.ClaveTexto);
+                if (!string.IsNullOrEmpty(usuario.ClaveTexto))
+                {
+                    usuario.Clave = EncriptarClave(usuario.ClaveTexto);
+                }
+                new UsuarioLN().ActualizarUsuario(usuario);
+                return RedirectToAction("Index");
             }
-            
-            new UsuarioLN().ActualizarUsuario(usuario);
-            return RedirectToAction("Index");
+            catch
+            {
+                return View(usuario);
+            }
         }
-        catch
-        {
-            return View(usuario);
-        }
+        return View(usuario);
     }
-    return View(usuario);
-}
 
-// GET: Usuario/Delete/5
-public IActionResult Delete(int id)
-{
-    Usuario? usuario = new UsuarioLN().BuscarUsuario(id);
-    if (usuario == null)
+    // GET: Usuario/Delete/5 (solo Admin)
+    [Authorize(Roles = "Admin")]
+    public IActionResult Delete(int id)
     {
-        return NotFound();
+        Usuario? usuario = new UsuarioLN().BuscarUsuario(id);
+        if (usuario == null)
+        {
+            return NotFound();
+        }
+        return View(usuario);
     }
-    return View(usuario);
-}
 
-// POST: Usuario/Delete/5
-[HttpPost, ActionName("Delete")]
-public IActionResult DeleteConfirmed(int id)
-{
-    new UsuarioLN().EliminarUsuario(id);
-    return RedirectToAction("Index");
-}
+    // POST: Usuario/Delete/5 (solo Admin)
+    [HttpPost, ActionName("Delete")]
+    [Authorize(Roles = "Admin")]
+    public IActionResult DeleteConfirmed(int id)
+    {
+        new UsuarioLN().EliminarUsuario(id);
+        return RedirectToAction("Index");
+    }
 
     // Método para encriptar contraseña usando SHA256
     private byte[] EncriptarClave(string claveTexto)

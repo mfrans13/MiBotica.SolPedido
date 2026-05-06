@@ -2,29 +2,40 @@
 
 <h2>Lista de Usuarios</h2>
 
-<p>
-    <a asp-action="Create" class="btn btn-success">Crear Nuevo Usuario</a>
-</p>
+@if (User.IsInRole("Admin"))
+{
+    <p>
+        <a asp-action="Create" class="btn btn-success">Crear Nuevo Usuario</a>
+    </p>
+}
 
 <table class="table">
     <thead>
-            <tr>
-                <th>ID</th>
-                <th>Código</th>
-                <th>Nombres</th>
-                <th>Acciones</th>
-            </tr>
+        <tr>
+            <th>ID</th>
+            <th>Código</th>
+            <th>Nombres</th>
+            <th>Acciones</th>
+        </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
-                    <td>@item.IdUsuario</td>
-                    <td>@item.CodUsuario</td>
-                    <td>@item.Nombres</td>
+                <td>@item.IdUsuario</td>
+                <td>@item.CodUsuario</td>
+                <td>@item.Nombres</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.IdUsuario">Editar</a> |
-                    <a asp-action="Delete" asp-route-id="@item.IdUsuario">Eliminar</a>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-action="Edit" asp-route-id="@item.IdUsuario">Editar</a>
+                        @:|
+                        <a asp-action="Delete" asp-route-id="@item.IdUsuario">Eliminar</a>
+                    }
+                    else
+                    {
+                        <span>Sin permisos</span>
+                    }
                 </td>
             </tr>
         }

@@ -57,7 +57,6 @@ TemporaryDependencyNodeTargetIdentifier=net10.0
 Class1.cs
 Core/
  OpcionDA.cs
- OpcionLN.cs
  UsuarioDA.cs
 obj/Debug/net10.0/
  .NETCoreApp,Version=v10.0.AssemblyAttributes.cs

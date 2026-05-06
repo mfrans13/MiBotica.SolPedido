@@ -121,4 +121,33 @@ public class UsuarioDA
             }
         }
     }
+
+    // ✅ Método para LOGIN
+    public Usuario? BuscarUsuarioPorCredenciales(string codUsuario, byte[] clave)
+    {
+        Usuario? usuario = null;
+        using (SqlConnection conexion = new SqlConnection(_connectionString))
+        {
+            using (SqlCommand comando = new SqlCommand("paUsuario_BuscaCodUserClave", conexion))
+            {
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@CodUsuario", codUsuario);
+                comando.Parameters.AddWithValue("@Clave", clave);
+                conexion.Open();
+
+                using (SqlDataReader reader = comando.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        usuario = new Usuario();
+                        usuario.IdUsuario = reader.GetInt32(0);
+                        usuario.CodUsuario = reader.GetString(1);
+                        usuario.Nombres = reader.GetString(2);
+                        usuario.Rol = reader.IsDBNull(3) ? null : reader.GetString(3);
+                    }
+                }
+            }
+        }
+        return usuario;
+    }
 }
