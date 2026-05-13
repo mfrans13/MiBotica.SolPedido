@@ -1,9 +1,10 @@
 using Entidades.Core;
 using AccesoDatos.Core;
+using Entidades.Base;
 
 namespace LogicaNegocio.Core;
 
-public class UsuarioLN
+public class UsuarioLN : BaseLN
 {
     public List<Usuario> ListaUsuarios()
     {

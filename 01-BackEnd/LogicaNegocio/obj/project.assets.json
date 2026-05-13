@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net10.0": {
+      "log4net/3.3.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/log4net.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/log4net.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Microsoft.Bcl.Cryptography/9.0.13": {
         "type": "package",
         "compile": {
@@ -543,7 +559,7 @@
           "System.Security.Cryptography.ProtectedData": "9.0.13"
         },
         "compile": {
-          "lib/net9.0/_._": {
+          "lib/net9.0/System.Configuration.ConfigurationManager.dll": {
             "related": ".xml"
           }
         },
@@ -588,7 +604,7 @@
       "System.Diagnostics.EventLog/9.0.13": {
         "type": "package",
         "compile": {
-          "lib/net9.0/_._": {
+          "lib/net9.0/System.Diagnostics.EventLog.dll": {
             "related": ".xml"
           }
         },
@@ -653,7 +669,7 @@
       "System.Security.Cryptography.ProtectedData/9.0.13": {
         "type": "package",
         "compile": {
-          "lib/net9.0/_._": {
+          "lib/net9.0/System.Security.Cryptography.ProtectedData.dll": {
             "related": ".xml"
           }
         },
@@ -686,6 +702,9 @@
       "Entidades/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "log4net": "3.3.1"
+        },
         "compile": {
           "bin/placeholder/Entidades.dll": {}
         },
@@ -696,6 +715,25 @@
     }
   },
   "libraries": {
+    "log4net/3.3.1": {
+      "sha512": "fgQ8XkqF0r4/CRfAq8xZqlPrG0/9n4rJAa1HlFGQMXtCAxbbLzXyuXCbu65NUbcKzQ9KDYr4239NNqipVRCv6A==",
+      "type": "package",
+      "path": "log4net/3.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net462/log4net.dll",
+        "lib/net462/log4net.pdb",
+        "lib/net462/log4net.xml",
+        "lib/netstandard2.0/log4net.dll",
+        "lib/netstandard2.0/log4net.pdb",
+        "lib/netstandard2.0/log4net.xml",
+        "log4net.3.3.1.nupkg.sha512",
+        "log4net.nuspec",
+        "package-icon.png"
+      ]
+    },
     "Microsoft.Bcl.Cryptography/9.0.13": {
       "sha512": "5T+bH3Lb1nEe8Hf/ixMxLmhlrx5wRi53wv7OhVwG2F1ZviW1ejFRS1NHur3uqPpJRGtkQwUchtY6zhVK2R+v+w==",
       "type": "package",
@@ -1720,7 +1758,8 @@
   "projectFileDependencyGroups": {
     "net10.0": [
       "AccesoDatos >= 1.0.0",
-      "Entidades >= 1.0.0"
+      "Entidades >= 1.0.0",
+      "log4net >= 3.3.1"
     ]
   },
   "packageFolders": {
@@ -1772,6 +1811,12 @@
     "frameworks": {
       "net10.0": {
         "targetAlias": "net10.0",
+        "dependencies": {
+          "log4net": {
+            "target": "Package",
+            "version": "[3.3.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

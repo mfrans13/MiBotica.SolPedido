@@ -54,6 +54,7 @@ TemporaryDependencyNodeTargetIdentifier=net10.0
 /warnaserror+:NU1605,SYSLIB0011
 
 [sourceFiles]
+Base/BaseLN.cs
 Class1.cs
 core/
  Opcion.cs
@@ -232,6 +233,10 @@ obj/Debug/net10.0/
  System.Xml.XPath.dll
  System.Xml.XPath.XDocument.dll
  WindowsBase.dll
+<NUGET>/
+ log4net/3.3.1/lib/netstandard2.0/log4net.dll
+ system.configuration.configurationmanager/4.5.0/ref/netstandard2.0/System.Configuration.ConfigurationManager.dll
+ system.security.permissions/4.5.0/ref/netstandard2.0/System.Security.Permissions.dll
 
 [analyzerReferences]
 <DOTNET>/packs/Microsoft.NETCore.App.Ref/10.0.6/analyzers/dotnet/cs/

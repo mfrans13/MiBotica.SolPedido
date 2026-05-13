@@ -5,11 +5,20 @@ using System.Security.Claims;
 using Entidades.Core;
 using LogicaNegocio.Core;
 using Microsoft.AspNetCore.Http;
+using log4net;
+using System.Reflection;
 
 namespace ClienteWeb.Controllers;
 
 public class LoginController : Controller
 {
+    private readonly ILog _log;
+
+    public LoginController()
+    {
+        _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+    }
+
     // GET: Login/Index
     public IActionResult Index()
     {
@@ -18,7 +27,7 @@ public class LoginController : Controller
 
     // POST: Login/Index
     [HttpPost]
-    public IActionResult Index(string codUsuario, string claveTexto)
+    public async Task<IActionResult> Index(string codUsuario, string claveTexto)
     {
         if (string.IsNullOrEmpty(codUsuario) || string.IsNullOrEmpty(claveTexto))
         {
@@ -32,10 +41,12 @@ public class LoginController : Controller
             byte[] claveEncriptada = EncriptarClave(claveTexto);
 
             // Buscar usuario en la BD
-            Usuario? usuario = new LogicaNegocio.Core.UsuarioLN().BuscarUsuarioPorCredenciales(codUsuario, claveEncriptada);
+            Usuario? usuario = new UsuarioLN().BuscarUsuarioPorCredenciales(codUsuario, claveEncriptada);
 
             if (usuario != null)
             {
+                _log.Info($"Usuario {codUsuario} inició sesión correctamente.");
+
                 // Crear la sesión (cookie)
                 var claims = new List<Claim>
                 {
@@ -43,9 +54,10 @@ public class LoginController : Controller
                     new Claim(ClaimTypes.NameIdentifier, usuario.IdUsuario.ToString()),
                     new Claim("Nombres", usuario.Nombres)
                 };
+
                 if (!string.IsNullOrEmpty(usuario.Rol))
                 {
-                 claims.Add(new Claim(ClaimTypes.Role, usuario.Rol));
+                    claims.Add(new Claim(ClaimTypes.Role, usuario.Rol));
                 }
 
                 var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -55,7 +67,7 @@ public class LoginController : Controller
                     ExpiresUtc = DateTime.UtcNow.AddHours(8)
                 };
 
-                HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, 
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme,
                     new ClaimsPrincipal(claimsIdentity), authProperties);
 
                 // Guardar usuario en variable de sesión
@@ -66,12 +78,14 @@ public class LoginController : Controller
             }
             else
             {
+                _log.Warn($"Intento de inicio de sesión fallido para usuario: {codUsuario}");
                 ViewBag.Error = "Usuario o contraseña incorrectos";
                 return View();
             }
         }
         catch (Exception ex)
         {
+            _log.Error($"Error en login para usuario {codUsuario}: {ex.Message}", ex);
             ViewBag.Error = "Error al iniciar sesión: " + ex.Message;
             return View();
         }
@@ -80,6 +94,7 @@ public class LoginController : Controller
     // Cerrar sesión
     public IActionResult Logout()
     {
+        _log.Info($"Usuario {User.Identity.Name} cerró sesión.");
         HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
         HttpContext.Session.Clear();
         return RedirectToAction("Index", "Login");

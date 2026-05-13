@@ -9,10 +9,22 @@
       "ClienteWeb/1.0.0": {
         "dependencies": {
           "Entidades": "1.0.0",
-          "LogicaNegocio": "1.0.0"
+          "LogicaNegocio": "1.0.0",
+          "log4net": "3.3.1"
         },
         "runtime": {
           "ClienteWeb.dll": {}
+        }
+      },
+      "log4net/3.3.1": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "9.0.13"
+        },
+        "runtime": {
+          "lib/netstandard2.0/log4net.dll": {
+            "assemblyVersion": "3.3.1.0",
+            "fileVersion": "3.3.1.0"
+          }
         }
       },
       "Microsoft.Bcl.Cryptography/9.0.13": {
@@ -310,6 +322,9 @@
         }
       },
       "Entidades/1.0.0": {
+        "dependencies": {
+          "log4net": "3.3.1"
+        },
         "runtime": {
           "Entidades.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -320,7 +335,8 @@
       "LogicaNegocio/1.0.0": {
         "dependencies": {
           "AccesoDatos": "1.0.0",
-          "Entidades": "1.0.0"
+          "Entidades": "1.0.0",
+          "log4net": "3.3.1"
         },
         "runtime": {
           "LogicaNegocio.dll": {
@@ -336,6 +352,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "log4net/3.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fgQ8XkqF0r4/CRfAq8xZqlPrG0/9n4rJAa1HlFGQMXtCAxbbLzXyuXCbu65NUbcKzQ9KDYr4239NNqipVRCv6A==",
+      "path": "log4net/3.3.1",
+      "hashPath": "log4net.3.3.1.nupkg.sha512"
     },
     "Microsoft.Bcl.Cryptography/9.0.13": {
       "type": "package",

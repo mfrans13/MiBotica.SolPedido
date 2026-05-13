@@ -142,3 +142,5 @@ C:\proyectoClase\MiBotica.SolPedido\02-FrontEnd\ClienteWeb\obj\Debug\net10.0\ref
 C:\proyectoClase\MiBotica.SolPedido\02-FrontEnd\ClienteWeb\obj\Debug\net10.0\ClienteWeb.pdb
 C:\proyectoClase\MiBotica.SolPedido\02-FrontEnd\ClienteWeb\obj\Debug\net10.0\ClienteWeb.genruntimeconfig.cache
 C:\proyectoClase\MiBotica.SolPedido\02-FrontEnd\ClienteWeb\obj\Debug\net10.0\ref\ClienteWeb.dll
+C:\proyectoClase\MiBotica.SolPedido\02-FrontEnd\ClienteWeb\bin\Debug\net10.0\log4net.config
+C:\proyectoClase\MiBotica.SolPedido\02-FrontEnd\ClienteWeb\bin\Debug\net10.0\log4net.dll

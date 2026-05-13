@@ -236,6 +236,7 @@ obj/Debug/net10.0/
  System.Xml.XPath.XDocument.dll
  WindowsBase.dll
 <NUGET>/
+ log4net/3.3.1/lib/netstandard2.0/log4net.dll
  microsoft.bcl.cryptography/9.0.13/lib/net9.0/Microsoft.Bcl.Cryptography.dll
  microsoft.data.sqlclient.extensions.abstractions/1.0.0/lib/netstandard2.0/Microsoft.Data.SqlClient.Extensions.Abstractions.dll
  microsoft.data.sqlclient.internal.logging/1.0.0/lib/netstandard2.0/Microsoft.Data.SqlClient.Internal.Logging.dll
@@ -257,9 +258,12 @@ obj/Debug/net10.0/
  microsoft.identitymodel.protocols/8.16.0/lib/net10.0/Microsoft.IdentityModel.Protocols.dll
  microsoft.identitymodel.tokens/8.16.0/lib/net10.0/Microsoft.IdentityModel.Tokens.dll
  microsoft.sqlserver.server/1.0.0/lib/netstandard2.0/Microsoft.SqlServer.Server.dll
+ system.configuration.configurationmanager/9.0.13/lib/net9.0/System.Configuration.ConfigurationManager.dll
  system.data.sqlclient/4.9.1/lib/net8.0/System.Data.SqlClient.dll
+ system.diagnostics.eventlog/9.0.13/lib/net9.0/System.Diagnostics.EventLog.dll
  system.identitymodel.tokens.jwt/8.16.0/lib/net10.0/System.IdentityModel.Tokens.Jwt.dll
  system.security.cryptography.pkcs/9.0.13/lib/net9.0/System.Security.Cryptography.Pkcs.dll
+ system.security.cryptography.protecteddata/9.0.13/lib/net9.0/System.Security.Cryptography.ProtectedData.dll
 
 [analyzerReferences]
 <DOTNET>/packs/Microsoft.NETCore.App.Ref/10.0.6/analyzers/dotnet/cs/

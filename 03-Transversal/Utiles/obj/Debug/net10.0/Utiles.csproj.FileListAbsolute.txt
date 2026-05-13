@@ -9,3 +9,4 @@ C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Utiles\obj\Debug\net10.0\Util
 C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Utiles\obj\Debug\net10.0\refint\Utiles.dll
 C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Utiles\obj\Debug\net10.0\Utiles.pdb
 C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Utiles\obj\Debug\net10.0\ref\Utiles.dll
+C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Utiles\obj\Debug\net10.0\Utiles.sourcelink.json

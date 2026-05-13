@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "/2Xv9rn+tnw=",
+  "dgSpecHash": "77BiBqRx5wQ=",
   "success": true,
   "projectFilePath": "C:\\proyectoClase\\MiBotica.SolPedido\\03-Transversal\\Entidades\\Entidades.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\log4net\\3.3.1\\log4net.3.3.1.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.configuration.configurationmanager\\4.5.0\\system.configuration.configurationmanager.4.5.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.5.0\\system.security.cryptography.protecteddata.4.5.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\system.security.permissions\\4.5.0\\system.security.permissions.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

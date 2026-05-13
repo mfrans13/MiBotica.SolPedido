@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "b60F+aTP/pY=",
+  "dgSpecHash": "F0efhH2lsp0=",
   "success": true,
   "projectFilePath": "C:\\proyectoClase\\MiBotica.SolPedido\\01-BackEnd\\LogicaNegocio\\LogicaNegocio.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\log4net\\3.3.1\\log4net.3.3.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.13\\microsoft.bcl.cryptography.9.0.13.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.data.sqlclient\\7.0.0\\microsoft.data.sqlclient.7.0.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.data.sqlclient.extensions.abstractions\\1.0.0\\microsoft.data.sqlclient.extensions.abstractions.1.0.0.nupkg.sha512",

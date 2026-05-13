@@ -10,3 +10,4 @@ C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Entidades\obj\Debug\net10.0\E
 C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Entidades\obj\Debug\net10.0\refint\Entidades.dll
 C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Entidades\obj\Debug\net10.0\Entidades.pdb
 C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Entidades\obj\Debug\net10.0\ref\Entidades.dll
+C:\proyectoClase\MiBotica.SolPedido\03-Transversal\Entidades\obj\Debug\net10.0\Entidades.csproj.AssemblyReference.cache
